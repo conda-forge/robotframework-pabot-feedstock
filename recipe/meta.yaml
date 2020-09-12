@@ -6,11 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robotframework-pabot-{{ version }}.tar.gz
-    sha256: 417f1e24feebec04396165554ef3970b6fd569e3f38ae20d6072d88ed54b65e6
-  # TODO: remove this if/when upstream PR is merged: https://github.com/mkorpela/pabot/pull/301
-  - url: https://raw.githubusercontent.com/mkorpela/pabot/{{ version }}/LICENSE.txt
-    sha256: 58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robotframework-pabot-{{ version }}.tar.gz
+  sha256: 417f1e24feebec04396165554ef3970b6fd569e3f38ae20d6072d88ed54b65e6
 
 build:
   number: 0
