@@ -19,10 +19,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
   run:
-    - python >=3.5
-    - robotframework
+    - python >=3.6
+    - robotframework >=3.2
+    - robotframework-stacktrace >=0.4.0
 
 test:
   imports:
