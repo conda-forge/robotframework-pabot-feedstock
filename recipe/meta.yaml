@@ -1,5 +1,5 @@
 {% set name = "robotframework-pabot" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robotframework-pabot-{{ version }}.tar.gz
-  sha256: 473a423c55c87872b7bc02b67763e636ee9e901fbb81df2c15fdb74f2ae028ea
+  sha256: 384ba46598b5dc6cfa6cf8ac122088cee8787fa3830dcdb43e913a9b8f432cbf
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.6
     - robotframework >=3.2
-    - robotframework-stacktrace >=0.4.0
+    - robotframework-stacktrace >=0.4.1
 
 test:
   imports:
