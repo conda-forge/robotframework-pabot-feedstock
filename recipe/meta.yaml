@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.4.0" %}
 
 package:
   name: robotframework-pabot
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/robotframework-pabot/robotframework-pabot-{{ version }}.tar.gz
-  sha256: 64762ee83a6a7ff61cd1935ddd2d492f439a5f649a76a7eaac9ab29a5e399897
+  sha256: fc55ab2d13e4c2a88e29d098b17a0bf917e1bb3e429d592801c943d85222992b
 
 build:
   number: 0
