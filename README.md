@@ -9,6 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/robotframework-
 
 Summary: Parallel test runner for Robot Framework
 
+A parallel executor for Robot Framework tests. With Pabot you can split one
+execution into multiple and save test execution time.
+
 Current build status
 ====================
 
