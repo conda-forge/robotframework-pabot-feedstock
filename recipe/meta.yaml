@@ -41,6 +41,9 @@ about:
   summary: Parallel test runner for Robot Framework
   license: Apache-2.0
   license_file: LICENSE.txt
+  description: |-
+    A parallel executor for Robot Framework tests. With Pabot you can split one 
+    execution into multiple and save test execution time.
 
 extra:
   recipe-maintainers:
