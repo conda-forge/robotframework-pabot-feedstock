@@ -9,6 +9,8 @@ Package license: Apache-2.0
 
 Summary: Parallel test runner for Robot Framework
 
+Development: https://github.com/mkorpela/pabot
+
 A parallel executor for Robot Framework tests. With Pabot you can split one
 execution into multiple and save test execution time.
 
