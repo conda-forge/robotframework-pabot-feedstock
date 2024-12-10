@@ -1,4 +1,4 @@
-{% set version = "4.0.4" %}
+{% set version = "4.0.5" %}
 
 {% set python_min = python_min | default("3.9") %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/r/robotframework-pabot/robotframework_pabot-{{ version }}.tar.gz
-  sha256: 8585b364f0880cd626ae9a2cb8972a53ba22dcb8cbfa8e0c850f780b8bfac03d
+  sha256: c8a8028a6ccc56a0fe23c302ed8c2dfa2b4f5a620d398b40cf6f0b1b866ebfa2
 
 build:
   number: 0
