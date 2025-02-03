@@ -3,7 +3,7 @@ About robotframework-pabot-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/robotframework-pabot-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pabot.org
+Home: https://pabot.org/
 
 Package license: Apache-2.0
 
