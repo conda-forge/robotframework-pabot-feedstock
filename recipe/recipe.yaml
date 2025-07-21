@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "4.3.0"
+  version: "4.3.1"
 
 package:
   name: robotframework-pabot
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/r/robotframework-pabot/robotframework_pabot-${{ version }}.tar.gz
-    sha256: 0da3d70055cad34c921b6c2ade80e839ea468307f326145f22d04d4fa7b996ab
+    sha256: c2fd3845124280e55fd42607756430277d6a2e8c9dd214b52d37420dbc3cc32b
 
 build:
   number: 0
