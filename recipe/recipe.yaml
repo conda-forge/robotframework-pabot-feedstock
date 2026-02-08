@@ -3,19 +3,25 @@ schema_version: 1
 
 context:
   version: "5.2.0"
+  python_check_max: "3.14"
 
 package:
   name: robotframework-pabot
   version: ${{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/r/robotframework-pabot/robotframework_pabot-${{ version }}.tar.gz
+  - target_directory: dist
+    url: https://pypi.org/packages/source/r/robotframework-pabot/robotframework_pabot-${{ version }}.tar.gz
     sha256: f212f6f4b02b60407cdeb5e0ec7f824e8590480f5d2cbf31b9b72a0ec8f03770
+  - target_directory: src
+    url: https://github.com/mkorpela/pabot/archive/refs/tags/${{ version }}.tar.gz
+    sha256: 11fe8aada3331010e057d38e3eff3448bbd6cd29e44c125efc71f9736c7b6590
 
 build:
   number: 0
   noarch: python
   script:
+    - cd dist
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
@@ -27,7 +33,6 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools >=42
   run:
-    - natsort >=8.2.0
     - python >=${{ python_min }}
     - robotframework >=3.2
     - robotframework-stacktrace >=0.4.1
@@ -35,26 +40,34 @@ requirements:
 tests:
   - python:
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
       imports:
         - pabot
         - pabot.py3
-  - requirements:
+  - files:
+      source:
+        - src/tests/
+    requirements:
       run:
         - python ${{ python_min }}.*
+        - pytest-cov
     script:
-      - pabot --version
-      - pabot --help
+      - cd src
+      - coverage run --source=pabot --branch -m pytest -vv --tb=long --color=yes
+      - coverage report --show-missing --skip-covered --fail-under=53
 
 about:
   summary: Parallel test runner for Robot Framework
   license: Apache-2.0
-  license_file: LICENSE.txt
+  license_file: src/LICENSE
   description: |-
     A parallel executor for Robot Framework tests. With Pabot you can split one
     execution into multiple and save test execution time.
-  homepage: https://pabot.org
+  homepage: https://pypi.org/project/robotframework-pabot
   repository: https://github.com/mkorpela/pabot
+  documentation: https://pabot.org
 
 extra:
   recipe-maintainers:
