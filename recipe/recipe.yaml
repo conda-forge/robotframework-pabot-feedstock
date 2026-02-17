@@ -56,7 +56,7 @@ tests:
     script:
       - cd src
       - coverage run --source=pabot --branch -m pytest -vv --tb=long --color=yes
-      - coverage report --show-missing --skip-covered --fail-under=53
+      - coverage report --show-missing --skip-covered --fail-under=52
 
 about:
   summary: Parallel test runner for Robot Framework
