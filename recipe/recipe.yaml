@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "5.2.0"
+  version: "5.2.1"
   python_check_max: "3.14"
 
 package:
@@ -12,10 +12,10 @@ package:
 source:
   - target_directory: dist
     url: https://pypi.org/packages/source/r/robotframework-pabot/robotframework_pabot-${{ version }}.tar.gz
-    sha256: f212f6f4b02b60407cdeb5e0ec7f824e8590480f5d2cbf31b9b72a0ec8f03770
+    sha256: 1c716a6d322e2e999ecec9196d25b4614e8148532229e61926f8bb60fb1adccb
   - target_directory: src
     url: https://github.com/mkorpela/pabot/archive/refs/tags/${{ version }}.tar.gz
-    sha256: 11fe8aada3331010e057d38e3eff3448bbd6cd29e44c125efc71f9736c7b6590
+    sha256: fd0b3f91a9663683366fd40ae8acd87b2e09ed5fb5361e81e087d3040743ba4e
 
 build:
   number: 0
